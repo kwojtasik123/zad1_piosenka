@@ -1,0 +1,173 @@
+
+EAD+kwojtasik@PL-JB00NN3 MINGW64 ~/Documents/piosenka (master)
+$ git log -p piosenka.txt
+commit 5681003858cb0dc45c63efd9d60b61824c312c32
+Author: Wojtasik <katarzyna.cywinska@dxc.com>
+Date:   Wed Aug 14 07:56:23 2024 +0200
+
+    usunięcie refrenu
+
+diff --git a/piosenka.txt b/piosenka.txt
+index 0cf625f..205dfe6 100644
+--- a/piosenka.txt
++++ b/piosenka.txt
+@@ -1,23 +1,9 @@
+ <zwrotka1>
+
+-Dla mnie też niezbyt łaskawy był dzień
+-Dla mnie też za długa zima i zła
+-Dla mnie też ale przyznaj że w sumie się żyje cudnie
+-I przestań wyć
+-Przestań wyć
+-Przestań płakać
++<refren>
+
+ I po co czytasz komentarze sfrustrowanych miernot
+ Niech się durnie trują jadem oszczędź sobie złego
+
+-Dla mnie też niezbyt łaskawy był dzień
+-Dla mnie też za długa zima i zła
+-Dla mnie też los Cebula i krokodyle łzy
+-Przestań wyć
+-Przestań wyć
+-Przestań płakać
+-Dla mnie też niezbyt łaskawy był dzień
+-Dla mnie też za długa zima i zła
+-Dla mnie też los cebula i krokodyle łzy
+-Przestań wyć
+-Przestań wyć
+\ No newline at end of file
++<refren>
++<refren>
+\ No newline at end of file
+
+commit b581f3c75da93991e7363f52cc715be3b7d81f7e
+Author: Wojtasik <katarzyna.cywinska@dxc.com>
+Date:   Wed Aug 14 07:52:31 2024 +0200
+
+    usunięcie pierwszej zwrotki
+EAD+kwojtasik@PL-JB00NN3 MINGW64 ~/Documents/piosenka (master)
+$ git log -p zwrotka1.txt
+commit 1b409e321c81889ec07f6dd4089c62551956375f
+Author: Wojtasik <katarzyna.cywinska@dxc.com>
+Date:   Wed Aug 14 07:54:40 2024 +0200
+
+    przeniesienie pierwszej zwrotki do nowego pliku
+
+diff --git a/zwrotka1.txt b/zwrotka1.txt
+new file mode 100644
+index 0000000..e00ae0e
+--- /dev/null
++++ b/zwrotka1.txt
+@@ -0,0 +1,5 @@
++Zostaw ten cholerny kubek potniesz sobie palce
++Wypij mleko umyj buzię
++Przyjdę zanim zaśniesz
++To że galaktyczny podmuch zniszczy cywilizacje
++To nie jest dostateczny powód by wybuchać płaczem
+\ No newline at end of file
+
+EAD+kwojtasik@PL-JB00NN3 MINGW64 ~/Documents/piosenka (master)
+$
+
+
+EAD+kwojtasik@PL-JB00NN3 MINGW64 ~/Documents/piosenka (master)
+$ git log -p refren.txt
+commit 40ea50dafc9afdcb6c4f45f25ae06f55358cefc1 (HEAD -> master)
+Author: Wojtasik <katarzyna.cywinska@dxc.com>
+Date:   Wed Aug 14 07:59:37 2024 +0200
+
+    Revert "usunięcie pierwszej linii refrenu"
+    Anulowanie usunięcia linii
+    This reverts commit dfe05c7d4ea49d7f626aeaae6ae837e782b0277b.
+
+diff --git a/refren.txt b/refren.txt
+index eec7d0f..5db6182 100644
+--- a/refren.txt
++++ b/refren.txt
+@@ -1,4 +1,4 @@
+-
++Dla mnie też niezbyt łaskawy był dzień
+ Dla mnie też za długa zima i zła
+ Dla mnie też ale przyznaj że w sumie się żyje cudnie
+ I przestań wyć
+
+commit dfe05c7d4ea49d7f626aeaae6ae837e782b0277b
+Author: Wojtasik <katarzyna.cywinska@dxc.com>
+Date:   Wed Aug 14 07:58:11 2024 +0200
+
+    usunięcie pierwszej linii refrenu
+
+diff --git a/refren.txt b/refren.txt
+index 5db6182..eec7d0f 100644
+--- a/refren.txt
++++ b/refren.txt
+@@ -1,4 +1,4 @@
+-Dla mnie też niezbyt łaskawy był dzień
++
+ Dla mnie też za długa zima i zła
+ Dla mnie też ale przyznaj że w sumie się żyje cudnie
+ I przestań wyć
+
+commit 70a9489c5fec1cb279badc5e03339187d000e860
+Author: Wojtasik <katarzyna.cywinska@dxc.com>
+Date:   Wed Aug 14 07:57:16 2024 +0200
+
+    przeniesienie refrenu do nowego pliku
+
+diff --git a/refren.txt b/refren.txt
+new file mode 100644
+index 0000000..5db6182
+--- /dev/null
+:
+
+EAD+kwojtasik@PL-JB00NN3 MINGW64 ~/Documents/piosenka (master)
+$ git log
+commit 40ea50dafc9afdcb6c4f45f25ae06f55358cefc1 (HEAD -> master)
+Author: Wojtasik <katarzyna.cywinska@dxc.com>
+Date:   Wed Aug 14 07:59:37 2024 +0200
+
+    Revert "usunięcie pierwszej linii refrenu"
+    Anulowanie usunięcia linii
+    This reverts commit dfe05c7d4ea49d7f626aeaae6ae837e782b0277b.
+
+commit dfe05c7d4ea49d7f626aeaae6ae837e782b0277b
+Author: Wojtasik <katarzyna.cywinska@dxc.com>
+Date:   Wed Aug 14 07:58:11 2024 +0200
+
+    usunięcie pierwszej linii refrenu
+
+commit 70a9489c5fec1cb279badc5e03339187d000e860
+Author: Wojtasik <katarzyna.cywinska@dxc.com>
+Date:   Wed Aug 14 07:57:16 2024 +0200
+
+    przeniesienie refrenu do nowego pliku
+
+commit 5681003858cb0dc45c63efd9d60b61824c312c32
+Author: Wojtasik <katarzyna.cywinska@dxc.com>
+Date:   Wed Aug 14 07:56:23 2024 +0200
+
+    usunięcie refrenu
+
+commit 1b409e321c81889ec07f6dd4089c62551956375f
+Author: Wojtasik <katarzyna.cywinska@dxc.com>
+Date:   Wed Aug 14 07:54:40 2024 +0200
+
+    przeniesienie pierwszej zwrotki do nowego pliku
+
+commit b581f3c75da93991e7363f52cc715be3b7d81f7e
+Author: Wojtasik <katarzyna.cywinska@dxc.com>
+Date:   Wed Aug 14 07:52:31 2024 +0200
+
+    usunięcie pierwszej zwrotki
+
+commit 69b4655b6780ee7ada9456e842a52af10dc5fdba
+Author: Wojtasik <katarzyna.cywinska@dxc.com>
+Date:   Wed Aug 14 07:51:11 2024 +0200
+
+    tekst piosenki
+
+EAD+kwojtasik@PL-JB00NN3 MINGW64 ~/Documents/piosenka (master)
+$
+
+
